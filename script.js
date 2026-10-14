@@ -108,6 +108,14 @@ function clearList() {
     }
 }
 
+function togglePurchased(index) {
+    shoppingItems[index].purchased = !shoppingItems[index].purchased;
+
+    saveToLocalStorage();
+
+    renderList();
+}
+
 addBtn.addEventListener('click', addItem);
 clearBtn.addEventListener('click', clearList);
 
